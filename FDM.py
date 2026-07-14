@@ -111,22 +111,24 @@ try:
             'transaction_min': [trx_min]
         })
         
-            
-        result_predict = model.predict(new_transaction)[0]
-        result_prob = model.predict_proba(new_transaction)[0, 1]
-        result_prob2 = model.predict_proba(new_transaction)[0, 0]
-        if result_predict == 1:
-            st.error('Your transaction is Fraudulent!')
-            st.write(f"Trx Fraudulent rate {result_prob:.1%}")
-            st.warning(f'Guy you be thief!')
-            
-        elif result_predict == 0:
-            st.success("Your transaction is Legitimate!")
-            st.write(f"Trx Legitimate rate {result_prob2:.1%}")
-            #st.info(f"Model confidence: {result_prob:.1%}")
-                
+        if customer_age == 0 or credit_score == 0 or account_balance == 0 or trx_amount == 0 or trx_year== 0:
+            st.warning("Please fill all required information before predicting.")
         else:
-            st.warning('Complete the form!')
+            result_predict = model.predict(new_transaction)[0]
+            result_prob = model.predict_proba(new_transaction)[0, 1]
+            result_prob2 = model.predict_proba(new_transaction)[0, 0]
+            if result_predict == 1:
+                st.error('Your transaction is Fraudulent!')
+                st.write(f"Trx Fraudulent rate {result_prob:.1%}")
+                st.warning(f'Guy you be thief!')
+                
+            elif result_predict == 0:
+                st.success("Your transaction is Legitimate!")
+                st.write(f"Trx Legitimate rate {result_prob2:.1%}")
+                #st.info(f"Model confidence: {result_prob:.1%}")
+                    
+            else:
+                st.warning('Complete the form!')
      
             
     
