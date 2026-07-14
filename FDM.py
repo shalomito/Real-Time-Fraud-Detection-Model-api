@@ -118,10 +118,13 @@ try:
                 st.write(f"Trx Fraudulent rate {result_prob:.1%}")
                 st.warning(f'Guy you be thief!')
         
-            else:
+            elif result_predict == 0:
                 st.success("Your transaction is Legitimate!")
                 st.write(f"Trx Legitimate rate {result_prob2:.1%}")
                 st.info(f"Model confidence: {result_prob:.1%}")
+
+            else:
+                st.warning('Complete the form!')
         
 except Exception as e:
         st.warning('Fill the necessary informations, OPO')
