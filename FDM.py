@@ -53,9 +53,10 @@ country = st.selectbox('Country', [
         "United States",
         "Canada",
         "Germany",
-        "France"
+        "France",
+        "Others"
     ])
-city = st.selectbox('City', ['Kumasi', "Port Harcourt", "Mombasa", "Cape Town", "Cairo", "Birmingham", "Vancouver","Frankfurt", "Marseille" ])
+city = st.selectbox('City', ['Kumasi', "Port Harcourt", "Mombasa", "Cape Town", "Cairo", "Birmingham", "Vancouver","Frankfurt", "Marseille", "Others" ])
 
 merchant_cat = st.text_input('What was purchased?' )
 pay_method = st.selectbox('Payment Method', ['Transfer',' Crypto','Card','Physical Cash','Giftcard'] )
