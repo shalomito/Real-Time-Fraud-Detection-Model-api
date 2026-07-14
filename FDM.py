@@ -124,7 +124,7 @@ try:
             elif result_predict == 0:
                 st.success("Your transaction is Legitimate!")
                 st.write(f"Trx Legitimate rate {result_prob2:.1%}")
-                st.info(f"Model confidence: {result_prob:.1%}")
+                #st.info(f"Model confidence: {result_prob:.1%}")
 
             else:
                 st.warning('Complete the form!')
