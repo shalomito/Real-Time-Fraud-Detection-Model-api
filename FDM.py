@@ -56,8 +56,8 @@ country = st.selectbox('Country', [
 city = st.selectbox('City', ['Kumasi', "Port Harcourt", "Mombasa", "Cape Town", "Cairo", "Birmingham", "Vancouver","Frankfurt", "Marseille" ])
 
 merchant_cat = st.text_input('What was purchased?' )
-pay_method = st.selectbox('Payment Method', ['Transfer'], ['Crypto'], ['Card'], ['Physical Cash'], ['Giftcard'] )
-dev_type = st.selectbox('Device Type', ['Phone'], ['PC'], ['Others'] )
+pay_method = st.selectbox('Payment Method', ['Transfer',' Crypto','Card','Physical Cash','Giftcard'] )
+dev_type = st.selectbox('Device Type', ['Phone, 'PC', 'Others'] )
 customer_age = st.slider('Customer Age', 18, 120)
 credit_score = st.slider('Credit Score', 0, 100)
 account_age = st.slider('Account Age', 0, 150)
