@@ -19,8 +19,7 @@ try:
             text-align: center;
         }
         </style>
-        """,
-        unsafe_allow_html=True
+        """, unsafe_allow_html=True
     )
     messages = [
         "🛡 Fraud detection powered by machine learning.",
