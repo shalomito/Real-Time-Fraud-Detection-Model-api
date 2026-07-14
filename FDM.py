@@ -40,7 +40,7 @@ with st.sidebar:
 
 hour_day = st.slider("Hours Day", 1, 24)
 is_weekend = st.selectbox("Is it weekend?\nTrue(1)/False(0)", [1, 0])
-night_trx = st.selectbox("True(1) OR False(0)", [1, 0])
+night_trx = st.selectbox("Night Transaction?\nTrue(1) OR False(0)", [1, 0])
 country = st.selectbox('Country', [
         "Nigeria",
         "Ghana",
