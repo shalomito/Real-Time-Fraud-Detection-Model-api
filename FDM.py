@@ -10,7 +10,7 @@ try:
     st.title("🛡️Fraud Detection System")
     st.write('\t' * 20, 'This AI⚙️system analyzes transaction patterns and predicts the probability of fraud')
     st.write('\t' *20, 'Please note that the AI 🤖 may make mistakes if informations are not completely filled.')
-    st.info('Model Loaded')
+    st.info('Model Loaded, Please wait..')
     
     st.markdown(
         """
