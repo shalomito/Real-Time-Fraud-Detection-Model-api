@@ -5,9 +5,9 @@ import time
 
 model = jb.load('my_fraud_detection_model.pkl')
 
-st.title("🤖")
+st.title("🤖🧠")
 st.title("🛡️Fraud Detection System")
-st.write('\t' * 20, 'This AI system analyzes transaction patterns and predicts the probability of fraud')
+st.write('\t' * 20, 'This AI⚙️system analyzes transaction patterns and predicts the probability of fraud')
 st.write('\t' *20, 'Please note that the AI 🤖 may make mistakes if informations are not completely filled.')
 st.info('Model Loaded')
 
@@ -130,3 +130,26 @@ try:
         
 except Exception as e:
         st.warning('Fill the necessary informations, OPO')
+
+
+
+st.markdown(
+    """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px;
+    }
+    </style>
+
+    <div class="footer">
+        | Powered by 🤖⚡Oludare M.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
