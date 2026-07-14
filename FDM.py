@@ -58,11 +58,11 @@ city = st.selectbox('City', ['Kumasi', "Port Harcourt", "Mombasa", "Cape Town", 
 merchant_cat = st.text_input('What was purchased?' )
 pay_method = st.selectbox('Payment Method', ['Transfer',' Crypto','Card','Physical Cash','Giftcard'] )
 dev_type = st.selectbox('Device Type', ['Phone', 'PC', 'Others'] )
-customer_age = st.text_input('Customer Age')
-credit_score = st.text_input('Credit Score')
-account_age = st.text_input('Account Age')
-account_balance = st.text_input('Account Balance')
-trx_amount = st.text_input('Transaction Amount')
+customer_age = st.number_input('Customer Age')
+credit_score = st.number_input('Credit Score')
+account_age = st.number_input('Account Age')
+account_balance = st.number_input('Account Balance')
+trx_amount = st.number_input('Transaction Amount')
 num_prev_trx = st.slider('Number of previous transactions', 0, 100)
 trx_frequency = st.slider('Transaction Frequency', 0, 200)
 #distance_from_home_meters = st.slider('Distance from Home Meters', 0, 400000)
@@ -73,7 +73,7 @@ pin_changed_recently = st.selectbox('Pin Changed Recently\nTrue(1)/False(0)', [1
 trx_hour = st.slider('Transaction Hour', 0, 24)
 trx_min = st.slider('Transaction Minute', 0, 60)
 distance_from_home = st.slider('Distance from Home(km)', 0, 2000)
-trx_year = st.text_input('Transaction Year')
+trx_year = st.number_input('Transaction Year')
 trx_day = st.slider('Transaction Day', 0, 31)
 trx_month = st.slider('Transaction Month', 1, 12)
 
@@ -116,7 +116,7 @@ try:
             if result_predict == 1:
                 st.error('Your transaction is Fraudulent!')
                 st.write(f"Trx Fraudulent rate {result_prob:.1%}")
-                st.warning(f'Review this transaction')
+                st.warning(f'Guy you be thief!')
         
             else:
                 st.success("Your transaction is Legitimate!")
@@ -124,4 +124,4 @@ try:
                 st.info(f"Model confidence: {result_prob:.1%}")
         
 except Exception as e:
-        st.warning('Fill the necessary informations')
+        st.warning('Fill the necessary informations, OPO')
