@@ -119,7 +119,7 @@ try:
             time.sleep(5)
 
         else:
-            st.success("Your transaction is Legitimate!, "Trx Legitimate rate {result_prob2:.1%}")
+            st.success("Your transaction is Legitimate!, Trx Legitimate rate {result_prob2:.1%}")
             st.balloons("Prediction completed")
 
 
