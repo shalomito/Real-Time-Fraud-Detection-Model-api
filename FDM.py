@@ -103,7 +103,7 @@ try:
             #'transaction_year': [trx_year],
             #'transaction_month': [trx_month],
             #'transaction_day': [trx_day],
-            'transaction_hour': [trx_hour],
+            'transaction_hour': [trx_hour]
            # 'transaction_min': [trx_min]
         })
         result_predict = model.predict(new_transaction)[0]
