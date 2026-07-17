@@ -25,13 +25,9 @@ st.markdown(
 
 with st.sidebar:
     st.title("Settings")
-
-    threshold = st.slider(
-        "Fraud Threshold",
-        0,
-        10,
-        50
-    )
+    st.write('FRAUD THRESHOLD')
+    st.write('70%')
+       )
 
 hour_day = st.slider("Hours Day", 1, 24)
 #is_weekend = st.selectbox("Is it weekend?\nTrue(1)/False(0)", [1, 0])
