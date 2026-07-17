@@ -76,51 +76,49 @@ trx_hour = st.slider('Transaction Hour', 0, 24)
 
 
 #try:
-   if st.button('Predict'):
-
-        new_transaction = pd.DataFrame({
-            'hour_of_day': [hour_day],
-            #'is_weekend': [is_weekend],
-            'is_night_transaction': [night_trx],
-            #'country': [country],
-            #'city': [city],
-            'merchant_category': [merchant_cat],
-            #'payment_method': [pay_method],
-            #'device_type': [dev_type],
-            #'customer_age': [customer_age],
-            #'credit_score': [credit_score],
-            #'account_age_years': [account_age],
-            #'account_balance': [account_balance],
-            'transaction_amount': [trx_amount],
-            #'num_prev_transactions': [num_prev_trx],
-            #'transaction_freq_monthly': [trx_frequency],
-            #'distance_from_home_km': [distance_from_home],
-            'time_since_last_txn_hrs': [time_since_last_24hrs],
-            # 'distance_from_home': [distance_from_home_meters],
-            'is_international': [is_international],
-            'failed_attempts': [failed_attempts],
-            'pin_changed_recently': [pin_changed_recently],
-            #'transaction_year': [trx_year],
-            #'transaction_month': [trx_month],
-            #'transaction_day': [trx_day],
-            'transaction_hour': [trx_hour]
-           # 'transaction_min': [trx_min]
-        })
-        result_predict = model.predict(new_transaction)[0]
-        result_prob = model.predict_proba(new_transaction)[0, 1]
-        result_prob2 = model.predict_proba(new_transaction)[0, 0]
-
-        if result_prob > 0.7 :
-            st.error(f'Your transaction is Fraudulent!\n\nTrx Fraudulent rate {result_prob:.1%}')
-            time.sleep(5)
-            # st.error(f"Trx Fraudulent rate {result_prob:.2%}")
-            # time.sleep(5)
-            st.warning(f'Review this transaction')
-            time.sleep(5)
-
-        else:
-            st.success(f"Your transaction is Legitimate!, Trx Legitimate rate {result_prob2:.1%}")
-            st.balloons("Prediction completed")
+if st.button('Predict'):
+    new_transaction = pd.DataFrame({
+        'hour_of_day': [hour_day],
+        #'is_weekend': [is_weekend],
+        'is_night_transaction': [night_trx],
+        #'country': [country],
+        #'city': [city],
+        'merchant_category': [merchant_cat],
+        #'payment_method': [pay_method],
+        #'device_type': [dev_type],
+        #'customer_age': [customer_age],
+        #'credit_score': [credit_score],
+        #'account_age_years': [account_age],
+        #'account_balance': [account_balance],
+        'transaction_amount': [trx_amount],
+        #'num_prev_transactions': [num_prev_trx],
+        #'transaction_freq_monthly': [trx_frequency],
+        #'distance_from_home_km': [distance_from_home],
+        'time_since_last_txn_hrs': [time_since_last_24hrs],
+        # 'distance_from_home': [distance_from_home_meters],
+        'is_international': [is_international],
+        'failed_attempts': [failed_attempts],
+        'pin_changed_recently': [pin_changed_recently],
+        #'transaction_year': [trx_year],
+        #'transaction_month': [trx_month],
+        #'transaction_day': [trx_day],
+        'transaction_hour': [trx_hour]
+       # 'transaction_min': [trx_min] 
+    })
+    result_predict = model.predict(new_transaction)[0]
+    result_prob = model.predict_proba(new_transaction)[0, 1]
+    result_prob2 = model.predict_proba(new_transaction)[0, 0]
+    
+    if result_prob > 0.7 :
+        st.error(f'Your transaction is Fraudulent!\n\nTrx Fraudulent rate {result_prob:.1%}')
+        time.sleep(5)
+        # st.error(f"Trx Fraudulent rate {result_prob:.2%}")
+        # time.sleep(5)
+        st.warning(f'Review this transaction')
+        time.sleep(5)
+    else:
+        st.success(f"Your transaction is Legitimate!, Trx Legitimate rate {result_prob2:.1%}")
+        st.balloons("Prediction completed")
 
 
 
