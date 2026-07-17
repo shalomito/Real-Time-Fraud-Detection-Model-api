@@ -62,6 +62,22 @@ Potential enhancements include:
 * Deploying the model as a real-time fraud detection API or web application.
 * Monitoring model performance over time and retraining with newly collected transaction data.
 
+**API FUNCTION ADDED**
+
+This project includes a FastAPI REST API that serves the trained fraud detection model. The API accepts transaction details and returns:
+
+* Fraud prediction (Fraud / Not Fraud.
+* Fraud probability score.
+
+**Endpoints:**
+* GET / – 
+* POST /predict – Predict transaction fraud.
+
+**API Input Features**
+Although the original model was trained using a larger set of transaction features, the deployed API uses a reduced subset of the most informative features to simplify client integration while maintaining strong predictive performance.
+
+
+
 Conclusion👌
 
 The developed fraud detection model demonstrates an effective machine learning workflow, from data preprocessing and feature engineering to prediction and evaluation. By providing both classification results and fraud probability estimates, the model offers a practical foundation for assisting financial institutions in identifying suspicious transactions and supporting fraud prevention efforts. While there is room for further optimization, the current implementation establishes a reliable baseline that can be extended for real-world deployment.
