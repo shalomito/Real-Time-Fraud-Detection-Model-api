@@ -40,6 +40,7 @@ Additionally, the model generates a **fraud probability score** for each transac
 **Strengths**
 
 * End-to-end preprocessing using Scikit-learn Pipeline.
+* The default classification threshold was adjusted from 0.5 to 0.7 to reduce false positives while maintaining acceptable  fraud detection recall.
 * Handles categorical variables efficiently with One-Hot Encoding.
 * Produces both class predictions and fraud probabilities.
 * Easy to deploy into applications such as Flask or Streamlit.
